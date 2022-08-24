@@ -98,12 +98,16 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://angular-schule.github.io/portfolio/",
+            "name": "jaaguil2",
+            "email": "joshua.a.aguilar@gmail.com"
+          }
         }
       }
+    },
+    "cli": {
+      "analytics": "de370ec5-e819-4684-9b9c-8f31d8153467"
     }
-  },
-  "cli": {
-    "analytics": "de370ec5-e819-4684-9b9c-8f31d8153467"
   }
-}
