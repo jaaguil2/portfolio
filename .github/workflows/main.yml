@@ -21,4 +21,4 @@ jobs:
       - name: Prepare and deploy
         run: |
           npm install
-          npm run ng -- deploy --base-href=/portfolio/
+          npm run ng -- deploy --base-href=/portfolio/ --no-silent
