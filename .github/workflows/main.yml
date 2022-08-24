@@ -1,23 +1,19 @@
-name: Deploy to GitHub Pages via angular-cli-ghpages
 
-on: [push]
-
-jobs: 
-  build-and-deploy:
+name: Host Angular app in GitHub 
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-
-      - name: Prepare and deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          npm install
-          npm run ng -- deploy --base-href=/portfolio/ --name="jaaguil2" --email=joshua.a.aguilar@gmail.com --no-silent
+    - uses: actions/checkout@v2
+    - name: Building and Deploying...
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+      with:
+        github_access_token: ${{ secrets.GH_TOKEN }}
+        build_configuration: production 
+        base_href: /portfolio/ 
+        deploy_branch: gh-pages 
+        angular_dist_build_folder: dist/portfolio
