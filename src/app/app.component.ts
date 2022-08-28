@@ -11,8 +11,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 })
 export class AppComponent implements OnInit {
   constructor() { }
-
   ngOnInit(): void {
   }
-
 }
