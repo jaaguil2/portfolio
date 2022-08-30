@@ -1,9 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { Link } from './interfaces/nav.interface';
+
+export interface Link {
+  name: string;
+  route: string;
+  icon: string;
+}
 
 @Component({
   standalone: true,
@@ -12,7 +17,7 @@ import { Link } from './interfaces/nav.interface';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
   links: Link[] = [
     {
       name: 'Home',
@@ -35,8 +40,4 @@ export class NavComponent implements OnInit {
       icon: 'alternate_email',
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
