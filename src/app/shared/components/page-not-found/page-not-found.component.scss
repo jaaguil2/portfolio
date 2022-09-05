@@ -1,0 +1,20 @@
+$font-size: 4em;
+$font-weight: 500;
+$font-left-margin: 0.3em;
+$icon-size: 2;
+$icon-top-margin: 0.15em;
+
+.main-content {
+  display: flex;
+
+  .header {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    margin-left: $font-left-margin;
+  }
+
+  .icon {
+    margin-top: $icon-top-margin;
+    transform: scale($icon-size);
+  }
+}

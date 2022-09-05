@@ -3,12 +3,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-
-export interface Link {
-  name: string;
-  route: string;
-  icon: string;
-}
+import { Link } from './models/nav.models';
 
 @Component({
   standalone: true,

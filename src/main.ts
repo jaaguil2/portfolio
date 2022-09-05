@@ -19,8 +19,4 @@ bootstrapApplication(AppComponent, {
       RouterModule.forRoot(ROUTES)
     ),
   ],
-})
-  .then((ref) => {
-    console.log(ref);
-  })
-  .catch((err) => console.error(err));
+}).catch((err) => console.error(err));

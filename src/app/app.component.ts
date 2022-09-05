@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
-import { NavComponent } from './common/nav/nav.component';
+import { NavComponent } from './shared/components/nav/nav.component';
 
 @Component({
   standalone: true,

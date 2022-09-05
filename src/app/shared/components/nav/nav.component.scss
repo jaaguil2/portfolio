@@ -1,9 +1,12 @@
+$nav-gap: 2em;
+$nav-height: 80%;
+
 .nav-container {
   display: flex;
   flex-direction: column;
-  gap: 2em;
   justify-content: center;
-  height: 80%;
+  gap: $nav-gap;
+  height: $nav-height;
 
   .image-container {
     padding-left: 20%;
