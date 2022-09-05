@@ -1,5 +1,3 @@
-@import './shared/styles/mixins.scss';
-
 $nav-width: 20%;
 $nav-height: 100%;
 
@@ -14,9 +12,5 @@ $nav-height: 100%;
     width: $nav-width;
     height: $nav-height;
     display: flex;
-  }
-
-  .main-content {
-    @include center-container();
   }
 }
