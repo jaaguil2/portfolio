@@ -1,11 +1,16 @@
+@import '../../styles/mixins.scss';
+
 $font-size: 4em;
 $font-weight: 500;
 $font-left-margin: 0.3em;
 $icon-size: 2;
 $icon-top-margin: 0.15em;
 
-.main-content {
-  display: flex;
+.main-container {
+  @include center-container();
+
+  .main-content {
+    display: flex;
 
   .header {
     font-size: $font-size;
@@ -18,3 +23,6 @@ $icon-top-margin: 0.15em;
     transform: scale($icon-size);
   }
 }
+
+}
+
