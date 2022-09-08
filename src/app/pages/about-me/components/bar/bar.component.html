@@ -1,1 +1,7 @@
-<p>bar |---|</p>
+<ng-container *ngFor="let element of list">
+  <div class="bar-container">
+    <p class="header-text">{{ element.name }}</p>
+    <mat-progress-bar class="bar" mode="determinate" color="accent" [value]="valueToPercent(element.expertise)">
+    </mat-progress-bar>
+  </div>
+</ng-container>
