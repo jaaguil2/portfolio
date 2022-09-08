@@ -1,13 +1,14 @@
-<h1>About Me</h1>
-
-<h2>Education</h2>
-LIST
-
-<h2>Frameworks</h2>
-PROGRESS BAR
-
-<h2>Languages</h2>
-PROGRESS BAR
-
-<h2>Business</h2>
-LIST
+<div class="container">
+  <mat-card *ngFor="let card of cards">
+    <mat-card-title>{{ card | titlecase }}</mat-card-title>
+    <mat-divider [inset]="true"></mat-divider>
+    <mat-card-content>
+      <ng-container [ngSwitch]="card">
+        <about-me-list *ngSwitchCase="'proficiencies'" [type]="card" [list]="proficiencies"></about-me-list>
+        <about-me-list *ngSwitchCase="'education'" [type]="card" [list]="education"></about-me-list>
+        <about-me-bar *ngSwitchCase="'frameworks'"></about-me-bar>
+        <about-me-bar *ngSwitchCase="'languages'"></about-me-bar>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</div>

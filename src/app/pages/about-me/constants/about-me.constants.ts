@@ -1,6 +1,6 @@
-import { Institute, Skill } from "../models/about-me.interface";
+import { Institute, Knowledge, Skill } from "../models/about-me.interface";
 
-export const BUSINESS: Skill[] = [
+export const PROFICIENCIES: Knowledge[] = [
   {
     name: 'Gitlab',
   },
@@ -83,11 +83,11 @@ export const FRAMEWORKS: Skill[] = [
 export const EDUCATION: Institute[] = [
   {
     name: 'General Assembly',
-    notes: 'Coding Bootcamp',
+    notes: 'Coding bootcamp',
   },
   {
     name: 'Oregon State University',
-    notes: 'In Progress: 2/3 years',
+    notes: 'In progress: 2/3 years',
   },
   {
     name: 'Codepath',

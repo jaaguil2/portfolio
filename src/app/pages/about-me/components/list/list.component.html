@@ -1,0 +1,7 @@
+<mat-list>
+  <mat-list-item *ngFor="let element of list">
+    <mat-icon matListIcon>{{ getType() }}</mat-icon>
+    <div mat-line class="header-text">{{ element.name }}</div>
+    <div mat-line *ngIf="element.notes" class="sub-text">{{ element.notes }}</div>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,10 @@
+$gap: 2em;
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $gap;
+  gap: $gap;
+  align-items: flex-start;
+}
+
