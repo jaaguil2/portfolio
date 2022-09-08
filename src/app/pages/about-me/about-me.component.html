@@ -6,8 +6,8 @@
       <ng-container [ngSwitch]="card">
         <about-me-list *ngSwitchCase="'proficiencies'" [type]="card" [list]="proficiencies"></about-me-list>
         <about-me-list *ngSwitchCase="'education'" [type]="card" [list]="education"></about-me-list>
-        <about-me-bar *ngSwitchCase="'frameworks'"></about-me-bar>
-        <about-me-bar *ngSwitchCase="'languages'"></about-me-bar>
+        <about-me-bar *ngSwitchCase="'frameworks'" [list]="frameworks"></about-me-bar>
+        <about-me-bar *ngSwitchCase="'languages'" [list]="languages"></about-me-bar>
       </ng-container>
     </mat-card-content>
   </mat-card>

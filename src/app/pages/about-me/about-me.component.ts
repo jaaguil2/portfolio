@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BarComponent } from './components/bar/bar.component';
 import { ListComponent } from './components/list/list.component';
 import {
@@ -25,7 +25,7 @@ import { MatDividerModule } from '@angular/material/divider';
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent {
   public readonly proficiencies: Knowledge[] = [...PROFICIENCIES].sort(
     this.alphaSort
   );
@@ -35,11 +35,7 @@ export class AboutMeComponent implements OnInit {
 
   cards: string[] = ['frameworks', 'languages', 'proficiencies', 'education'];
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  alphaSort(a: any, b: any) {
+  alphaSort(a: any, b: any): number {
     const nameA = a.name.toUpperCase();
     const nameB = b.name.toUpperCase();
     if (nameA < nameB) {
