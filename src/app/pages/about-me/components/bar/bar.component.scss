@@ -1,0 +1,16 @@
+$bar-height: 0.5em;
+$bar-width: 33em;
+$margins: 0.5em;
+
+.bar-container {
+  width: $bar-width;
+  margin: $margins;
+
+  .header-text {
+    font-size: large !important;
+  }
+
+  .bar {
+    height: $bar-height;
+  }
+}
