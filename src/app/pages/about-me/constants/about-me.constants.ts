@@ -1,4 +1,4 @@
-import { Institute, Knowledge, Skill } from "../models/about-me.interface";
+import { Institute, Knowledge, Skill } from '../models/about-me.interface';
 
 export const PROFICIENCIES: Knowledge[] = [
   {

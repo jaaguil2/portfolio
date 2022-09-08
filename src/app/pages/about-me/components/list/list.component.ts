@@ -14,8 +14,6 @@ export class ListComponent {
   @Input() list!: any[];
   @Input() type!: string;
 
-  constructor() { }
-
   getType(): string {
     switch (this.type) {
       case 'education':
