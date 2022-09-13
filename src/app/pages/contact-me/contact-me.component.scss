@@ -1,0 +1,19 @@
+@import "../../shared/styles/mixins.scss";
+
+.container {
+  @include center-container();
+
+    .headers{
+      margin: 0;
+    }
+
+    .link {
+      width: auto;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+    }
+  
+}

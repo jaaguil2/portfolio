@@ -1,1 +1,9 @@
-<p>contact-me works!</p>
+<div class="container">
+    <mat-list *ngFor="let contact of contacts">
+      <h3 class="headers">{{ contact.name }}</h3>
+      <div class="actions">
+        <a class="link" mat-list-item href="{{ contact.link }}">{{ contact.link }}</a>
+        <mat-icon (click)="copyLinkToClipboard()">assignment</mat-icon>
+      </div>
+    </mat-list>
+</div>
