@@ -1,10 +1,14 @@
 @import "../../shared/styles/mixins.scss";
 
+$header-margin: 0;
+
 .container {
   @include center-container();
 
-    .headers{
-      margin: 0;
+  .list {
+
+    .headers {
+      margin: $header-margin;
     }
 
     .link {
@@ -13,7 +17,8 @@
 
     .actions {
       display: flex;
+      justify-content: space-between;
       align-items: center;
     }
-  
+  }
 }
