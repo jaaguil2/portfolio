@@ -1,1 +1,31 @@
-<p>contact-me works!</p>
+<div class="container">
+  <div class="list">
+    <mat-list *ngFor="let contact of contacts">
+      <h3 class="headers">{{ contact.name }}</h3>
+      <div class="actions">
+        <ng-container [ngSwitch]="contact.isLink">
+          <a
+            *ngSwitchCase="true"
+            class="link"
+            mat-list-item
+            href="{{ contact.link }}"
+            target="_blank"
+            >{{ contact.link }}</a
+          >
+          <a mat-list-item *ngSwitchCase="false" class="link">{{
+            contact.link
+          }}</a>
+        </ng-container>
+        <button
+          mat-icon-button
+          matTooltip="Copy?"
+          matTooltipPosition="right"
+          aria-label="Clipboard button"
+          (click)="copyLinkToClipboard(contact.link)"
+        >
+          <mat-icon>assignment</mat-icon>
+        </button>
+      </div>
+    </mat-list>
+  </div>
+</div>
