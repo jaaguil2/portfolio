@@ -12,13 +12,14 @@
             target="_blank"
             >{{ contact.link }}</a
           >
-          <a mat-list-item *ngSwitchCase="false" class="link">{{
+          <a mat-list-item *ngSwitchCase="false" class="link" 
+            href="mailto:{{ contact.link }}">{{
             contact.link
           }}</a>
         </ng-container>
         <button
           mat-icon-button
-          matTooltip="Copy?"
+          matTooltip="Copy"
           matTooltipPosition="right"
           aria-label="Clipboard button"
           (click)="copyLinkToClipboard(contact.link)"
