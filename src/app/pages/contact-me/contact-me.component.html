@@ -12,7 +12,8 @@
             target="_blank"
             >{{ contact.link }}</a
           >
-          <a mat-list-item *ngSwitchCase="false" class="link">{{
+          <a mat-list-item *ngSwitchCase="false" class="link" 
+            href="mailto:{{ contact.link }}">{{
             contact.link
           }}</a>
         </ng-container>
