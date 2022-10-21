@@ -2,13 +2,6 @@ import { Project } from '../models/projects.models';
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Portfolio',
-    link: 'https://jaaguil2.github.io/portfolio/home',
-    githubLink: 'https://github.com/jaaguil2/portfolio',
-    image: './assets/images/portfolio.png',
-    notes: "I made this project using Angular 14's standalone components.",
-  },
-  {
     name: 'DoggoDex',
     link: 'https://intense-meadow-15815.herokuapp.com/',
     githubLink: 'https://github.com/jaaguil2/DoggoDex',
