@@ -1,8 +1,36 @@
-<mat-sidenav-container class="main-container">
-  <mat-sidenav mode="side" opened class="nav-bar">
-    <app-nav></app-nav>
-  </mat-sidenav>
+<!-- <mat-sidenav-container class="main-container">
+
   <mat-sidenav-content class="main-content">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-</mat-sidenav-container>
+
+  <mat-sidenav mode="side" opened class="nav-bar">
+    <app-nav></app-nav>
+  </mat-sidenav>
+  
+</mat-sidenav-container> -->
+<div>
+  <router-outlet></router-outlet>
+  <mat-toolbar>
+    <button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <p>menu</p>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <p>favorite</p>
+    </button>
+    <button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <p>share</p>
+    </button>
+  </mat-toolbar>
+</div>

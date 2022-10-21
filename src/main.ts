@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './routes';
+import { LayoutService } from './app/services/layout.service';
 
 if (environment.production) {
   enableProdMode();
@@ -18,5 +19,6 @@ bootstrapApplication(AppComponent, {
       BrowserAnimationsModule,
       RouterModule.forRoot(ROUTES)
     ),
+    LayoutService
   ],
 }).catch((err) => console.error(err));
