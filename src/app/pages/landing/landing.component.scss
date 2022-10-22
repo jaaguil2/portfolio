@@ -1,5 +1,7 @@
 @import '../../shared/styles/mixins.scss';
 
 .main {
-  @include center-container();
+  // @include center-container();
+  background-color: red;
+  margin: auto;
 }

@@ -1,18 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-// https://www.freecodecamp.org/news/html-page-width-height/
-// CSS reset
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 $app-height:  100vh;
 $fonts: Roboto, "Helvetica Neue", sans-serif;
 
+
+html {
+    // height: 100%;
+}
+
 body {
-    min-height: $app-height;
+    min-height: 100vh;
     font-family: $fonts;
     margin: 0 auto;
 }
