@@ -14,6 +14,9 @@ $nav-height: 80%;
     .image {
       border-radius: 50%;
       width: 70%;
+      // height: 2em;
+      // width: auto;
+      // object-fit: cover;
     }
   }
 
@@ -32,4 +35,21 @@ $nav-height: 80%;
       padding-top: 0.2em;
     }
   }
+}
+
+.bar {
+  display: flex;
+  gap: 1em;
+}
+
+.mat-nav-list a.active {
+    background: darkgray;
+    border-radius: 10%;
+}
+
+.image {
+  border-radius: 50%;
+  height: 2em;
+  width: auto;
+  object-fit: cover;
 }

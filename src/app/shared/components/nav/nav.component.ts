@@ -1,18 +1,27 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { Link } from './models/nav.models';
+import { Link, NavBarType } from './models/nav.models';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   standalone: true,
   selector: 'app-nav',
-  imports: [CommonModule, RouterModule, MatListModule, MatIconModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+  ],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
+  @Input() navType!: NavBarType;
+
   links: Link[] = [
     {
       name: 'Home',

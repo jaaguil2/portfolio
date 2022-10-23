@@ -9,28 +9,12 @@
   </mat-sidenav>
   
 </mat-sidenav-container> -->
-<div class="test">
-  <router-outlet class="a"></router-outlet>
-  <mat-toolbar>
-    <button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-    >
-      <p>menu</p>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      <p>favorite</p>
-    </button>
-    <button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-    >
-      <p>share</p>
-    </button>
-  </mat-toolbar>
+
+<div class="main">
+  <div class="nav">
+    <app-nav [navType]="'bar'"></app-nav>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 </div>

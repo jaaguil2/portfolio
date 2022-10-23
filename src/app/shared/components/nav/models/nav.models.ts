@@ -3,3 +3,5 @@ export interface Link {
   route: string;
   icon: string;
 }
+
+export type NavBarType = 'bar' | 'side';

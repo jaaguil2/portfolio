@@ -1,7 +1,14 @@
-@import '../../shared/styles/mixins.scss';
-
 .main {
-  // @include center-container();
-  background-color: red;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.Portrait {
+  margin-top: 33%;
+}
+
+.Landscape {
+  margin-top: 0.5em;
 }

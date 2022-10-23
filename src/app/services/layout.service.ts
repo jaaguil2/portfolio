@@ -1,11 +1,47 @@
 import { Injectable } from '@angular/core';
-import { Device, Layout, Orientation } from '../models/layout.model';
+import {
+  Device,
+  Layout,
+  Orientation,
+  breakpoints,
+  breakpointMap,
+} from '../models/layout.model';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class LayoutService {
-  constructor() {}
+  layoutTest?: string;
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  getLayoutTest(): Observable<Layout> {
+    return this.breakpointObserver.observe(breakpoints).pipe(
+      map((result) => {
+        for (const query of Object.keys(result.breakpoints)) {
+          if (result.breakpoints[query]) {
+            const layoutCode: string = breakpointMap.get(query) ?? 'x';
+            return this.getLayout(layoutCode);
+          }
+        }
+        return {
+          device: 'Web',
+          orientation: 'Landscape',
+        };
+      })
+    );
+    // return this.breakpointObserver.observe(breakpoints).subscribe((result) => {
+    //   for (const query of Object.keys(result.breakpoints)) {
+    //     if (result.breakpoints[query]) {
+    //       const layoutCode: string = breakpointMap.get(query) ?? 'x';
+    //       this.layoutTest = this.getLayout(layoutCode);
+    //     }
+    //   }
+    // });
+  }
 
   public getLayout(layout: string): Layout {
+    this.layoutTest = layout;
     if (layout.startsWith('x')) {
       return {
         device: 'Web',

@@ -1,7 +1,7 @@
-<div class="main">
-  <div class="content">
-    <h1>Joshua Aguilar</h1>
-    <h2>Software Developer</h2>
-    <p>Welcome! I've been programming for 2+ years, currently interning at BCBSMA.</p>
-  </div>
+<div class="main" [ngClass]="layout.orientation">
+  <h1>Joshua Aguilar {{layout.orientation}}</h1>
+  <h3>Software Developer</h3>
+  <mat-chip-list>
+    <mat-chip class="chips" *ngFor="let chip of chips | keyvalue" (click)="onChipClick(chip.value)">{{ chip.key }}</mat-chip>
+  </mat-chip-list>
 </div>
