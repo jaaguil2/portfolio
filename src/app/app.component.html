@@ -10,11 +10,33 @@
   
 </mat-sidenav-container> -->
 
-<div class="main">
-  <div class="nav">
-    <app-nav [navType]="'bar'"></app-nav>
-  </div>
-  <div>
+<ng-container [ngSwitch]="layoutType">
+  <div *ngSwitchCase="'bar'">
+    <app-nav [navType]="layoutType"></app-nav>
     <router-outlet></router-outlet>
   </div>
-</div>
+  <div *ngSwitchCase="'side'">
+    <app-nav [navType]="layoutType"></app-nav>
+    <router-outlet></router-outlet>
+    <!-- <mat-sidenav-container class="main-container">
+
+  <mat-sidenav-content class="main-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+  <mat-sidenav mode="side" opened class="nav-bar">
+    <app-nav></app-nav>
+  </mat-sidenav>
+  
+</mat-sidenav-container> -->
+  </div>
+</ng-container>
+
+<!--
+  [x]: mobile p  bar 1
+  [ ]: mobile l side no extra  2
+  [ ]: tablet p  bar 1
+  [ ]: talet l side no extra 2
+  [ ]: web p sideExtra  3
+  [ ]: web l side  3
+ -->

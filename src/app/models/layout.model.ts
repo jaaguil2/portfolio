@@ -1,6 +1,6 @@
 import { Breakpoints } from '@angular/cdk/layout';
 
-export type Device = 'Web' | 'Handset' | 'Tablet';
+export type Device = 'Web' | 'Mobile' | 'Tablet';
 export type Orientation = 'Portrait' | 'Landscape';
 
 export interface Layout {
@@ -9,8 +9,8 @@ export interface Layout {
 }
 
 export const breakpointMap = new Map([
-  [Breakpoints.HandsetLandscape, 'Handset|Landscape'],
-  [Breakpoints.HandsetPortrait, 'Handset|Portrait'],
+  [Breakpoints.HandsetLandscape, 'Mobile|Landscape'],
+  [Breakpoints.HandsetPortrait, 'Mobile|Portrait'],
   [Breakpoints.TabletLandscape, 'Tablet|Landscape'],
   [Breakpoints.TabletPortrait, 'Tablet|Portrait'],
   [Breakpoints.WebLandscape, 'Web|Landscape'],

@@ -8,7 +8,7 @@ export const PROFICIENCIES: Knowledge[] = [
     name: 'Github',
   },
   {
-    name: 'Atlassian Confluence', // TODO: double check
+    name: 'Atlassian Confluence',
   },
   {
     name: 'Atlassian Jira',

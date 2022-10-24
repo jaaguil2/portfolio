@@ -1,7 +1,9 @@
 <div class="main" [ngClass]="layout.orientation">
-  <h1>Joshua Aguilar {{layout.orientation}}</h1>
+  <h1>Joshua Aguilar</h1>
   <h3>Software Developer</h3>
   <mat-chip-list>
     <mat-chip class="chips" *ngFor="let chip of chips | keyvalue" (click)="onChipClick(chip.value)">{{ chip.key }}</mat-chip>
   </mat-chip-list>
 </div>
+
+<!-- TODO: change to buttons instead of chips -->

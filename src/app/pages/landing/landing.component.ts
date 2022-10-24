@@ -1,7 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {
+  MatSnackBarModule,
+  MatSnackBarRef,
+  TextOnlySnackBar,
+} from '@angular/material/snack-bar';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Layout } from 'src/app/models/layout.model';
 import { LayoutService } from 'src/app/services/layout.service';
@@ -14,7 +18,7 @@ import { LandingChips } from './models/landing.model';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent implements OnInit{
+export class LandingComponent implements OnInit, OnDestroy {
   chips: LandingChips = {
     Innovative:
       'The best way to predict the future is to create it.  - Alan Kay',
@@ -25,19 +29,28 @@ export class LandingComponent implements OnInit{
   };
 
   layout!: Layout;
+  snack?: MatSnackBarRef<TextOnlySnackBar>;
 
-  constructor(private snackBar: MatSnackBar, private layoutService: LayoutService) {}
+  constructor(
+    private _snackBar: MatSnackBar,
+    private layoutService: LayoutService
+  ) {}
 
-  ngOnInit() {
-    this.layoutService.getLayoutTest().subscribe(r => {
-      console.log(r)
-      this.layout = r;
+  ngOnInit(): void {
+    this.layoutService.getLayout().subscribe((layout: Layout) => {
+      this.layout = layout;
     });
   }
 
   onChipClick(chipMessage: string): void {
-    this.snackBar.open(chipMessage, '| Close', {
+    this.snack = this._snackBar.open(chipMessage, '| Close', {
       duration: 10000,
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.snack) {
+      this.snack.dismiss();
+    }
   }
 }

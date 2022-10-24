@@ -1,5 +1,5 @@
 <ng-container [ngSwitch]="navType">
-  <mat-nav-list *ngSwitchCase="'side'" class="nav-container">
+  <mat-nav-list *ngSwitchCase="'sideExtra'" class="nav-container">
     <div class="image-container">
       <img
         class="image"
@@ -15,10 +15,21 @@
     </a>
   </mat-nav-list>
 
+  <mat-nav-list *ngSwitchCase="'side'" >
+    <img
+      class="image-side"
+      src="./assets/images/profile-pic.png"
+      alt="Profile picture"
+    />
+    <a mat-list-item routerLink="{{ link.route }}" *ngFor="let link of links">
+        <mat-icon>{{ link.icon }}</mat-icon>
+    </a>
+  </mat-nav-list>
+
   <mat-toolbar *ngSwitchCase="'bar'">
     <mat-nav-list class="bar">
       <img
-        class="image"
+        class="image-mobile"
         src="./assets/images/profile-pic.png"
         alt="Profile picture"
       />
@@ -33,5 +44,3 @@
     </mat-nav-list>
   </mat-toolbar>
 </ng-container>
-
-<!-- [ ]: Tooltip for a sec on load then never again -->

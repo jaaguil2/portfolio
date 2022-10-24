@@ -3,8 +3,9 @@ import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { Link, NavBarType } from './models/nav.models';
+import { Link } from './models/nav.models';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { LayoutType } from 'src/app/models/app.model';
 
 @Component({
   standalone: true,
@@ -20,7 +21,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-  @Input() navType!: NavBarType;
+  @Input() navType!: LayoutType;
 
   links: Link[] = [
     {

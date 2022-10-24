@@ -40,16 +40,27 @@ $nav-height: 80%;
 .bar {
   display: flex;
   gap: 1em;
+
+  .image-mobile {
+    border-radius: 50%;
+    height: 2em;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+.side {
+  background-color: red;
+
+  .image-side {
+    border-radius: 50%;
+    height: .1em;
+    width: auto;
+    object-fit: cover;
+  }
 }
 
 .mat-nav-list a.active {
-    background: darkgray;
-    border-radius: 10%;
-}
-
-.image {
-  border-radius: 50%;
-  height: 2em;
-  width: auto;
-  object-fit: cover;
+  background: darkgray;
+  border-radius: 10%;
 }
