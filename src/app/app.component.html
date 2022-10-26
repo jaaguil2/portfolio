@@ -15,24 +15,23 @@
     <app-nav [navType]="layoutType"></app-nav>
     <router-outlet></router-outlet>
   </div>
+
   <div *ngSwitchCase="'side'">
-    <app-nav [navType]="layoutType"></app-nav>
-    <router-outlet></router-outlet>
-    <!-- <mat-sidenav-container class="main-container">
+    <!-- <app-nav [navType]="layoutType"></app-nav>
+    <router-outlet></router-outlet> -->
+    <mat-sidenav-container class="main-container">
+      <mat-sidenav mode="side" opened class="nav-bar">
+        <app-nav [navType]="layoutType"></app-nav>
+      </mat-sidenav>
 
-  <mat-sidenav-content class="main-content">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-
-  <mat-sidenav mode="side" opened class="nav-bar">
-    <app-nav></app-nav>
-  </mat-sidenav>
-  
-</mat-sidenav-container> -->
+      <mat-sidenav-content class="main-content">
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
 </ng-container>
-
-<!--
+<!-- TODO: Fix case 'Side' -->
+<!-- INFO
   [x]: mobile p  bar 1
   [ ]: mobile l side no extra  2
   [ ]: tablet p  bar 1
