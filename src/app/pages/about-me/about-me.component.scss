@@ -1,9 +1,12 @@
-$gap: 3em;
-
-.container {
+.card-container {
   display: flex;
-  flex-wrap: wrap;
-  padding: $gap;
-  gap: $gap;
-  align-items: flex-start;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+  align-items: center;
+
+  .card {
+    min-width: 89%;
+    max-width: 90%;
+  }
 }
