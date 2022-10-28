@@ -27,7 +27,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrls: ['./contact-me.component.scss'],
 })
 export class ContactMeComponent {
-  contacts: Contact[] = CONTACTS;
+  public readonly contacts: Contact[] = [...CONTACTS];
 
   constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) {}
 
