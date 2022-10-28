@@ -1,23 +1,14 @@
-@import "../../shared/styles/mixins.scss";
-
-$header-margin: 0;
-
 .container {
-  @include center-container();
+  margin: 1em;
 
   .list {
-
     .headers {
-      margin: $header-margin;
-    }
-
-    .link {
-      width: auto;
+      margin: 0;
     }
 
     .actions {
+      background-color: red;
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
   }

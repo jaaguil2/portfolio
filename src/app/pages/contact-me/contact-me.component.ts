@@ -32,9 +32,9 @@ export class ContactMeComponent {
   constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) {}
 
   copyLinkToClipboard(text: string): void {
+    this.clipboard.copy(text);
     this._snackBar.open('Copied!', 'Close', {
       duration: 2000,
     });
-    this.clipboard.copy(text);
   }
 }
