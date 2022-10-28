@@ -1,1 +1,18 @@
-<p>projects works!</p>
+<div class="container">
+  <mat-card *ngFor="let project of projects" class="card">
+    <mat-card-title class="title">{{ project.name }}</mat-card-title>
+    <mat-card-content class="sub">
+      <p>{{ project.notes }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button target="_blank" href="{{ project.githubLink }}">Github</a>
+      <a mat-button target="_blank" href="{{ project.link }}">Project</a>
+    </mat-card-actions>
+    <img
+      mat-card-image
+      class="img"
+      src="{{ project.image }}"
+      alt="Project image"
+    />
+  </mat-card>
+</div>
