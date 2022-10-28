@@ -1,42 +1,3 @@
-$nav-gap: 2em;
-$nav-height: 80%;
-
-.nav-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: $nav-gap;
-  height: $nav-height;
-
-  .image-container {
-    padding-left: 20%;
-
-    .image {
-      border-radius: 50%;
-      width: 70%;
-      // height: 2em;
-      // width: auto;
-      // object-fit: cover;
-    }
-  }
-
-  .nav-element {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-
-    .icon {
-      margin-right: 0.3em;
-    }
-
-    .text {
-      font-size: larger;
-      padding-top: 0.2em;
-    }
-  }
-}
-
 .bar {
   display: flex;
   gap: 1em;
@@ -50,11 +11,16 @@ $nav-height: 80%;
 }
 
 .side {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 95%;
 
   .image-side {
     border-radius: 50%;
-    height: .1em;
+    height: 3.5em;
     width: auto;
     object-fit: cover;
   }
@@ -62,5 +28,4 @@ $nav-height: 80%;
 
 .mat-nav-list a.active {
   background: darkgray;
-  border-radius: 10%;
 }

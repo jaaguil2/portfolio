@@ -23,7 +23,7 @@ import { LayoutType } from 'src/app/models/app.model';
 export class NavComponent {
   @Input() navType!: LayoutType;
 
-  links: Link[] = [
+  public readonly links: Link[] = [
     {
       name: 'Home',
       route: '/home',

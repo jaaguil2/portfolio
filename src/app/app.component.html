@@ -17,25 +17,29 @@
   </div>
 
   <div *ngSwitchCase="'side'">
-    <!-- <app-nav [navType]="layoutType"></app-nav>
-    <router-outlet></router-outlet> -->
-    <mat-sidenav-container class="main-container">
-      <mat-sidenav mode="side" opened class="nav-bar">
+    <mat-sidenav-container class="fill-screen">
+      <mat-sidenav opened disableClose="true" mode="side" class="side-nav">
         <app-nav [navType]="layoutType"></app-nav>
       </mat-sidenav>
-
-      <mat-sidenav-content class="main-content">
+      <mat-sidenav-content>
         <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
   </div>
 </ng-container>
-<!-- TODO: Fix case 'Side' -->
+
 <!-- INFO
   [x]: mobile p  bar 1
-  [ ]: mobile l side no extra  2
+  [x]: mobile l side no extra  2
   [ ]: tablet p  bar 1
   [ ]: talet l side no extra 2
   [ ]: web p sideExtra  3
   [ ]: web l side  3
  -->
+
+ <!-- 
+  TODO:
+  0. QUICKLY merge projects, not perfect just done to move on
+  1. fix all pages with new web stuff
+  3. move on to next screen size
+  -->

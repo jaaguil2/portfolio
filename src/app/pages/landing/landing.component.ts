@@ -19,7 +19,7 @@ import { LandingChips } from './models/landing.model';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit, OnDestroy {
-  chips: LandingChips = {
+  public readonly chips: LandingChips = {
     Innovative:
       'The best way to predict the future is to create it.  - Alan Kay',
     Passionate:

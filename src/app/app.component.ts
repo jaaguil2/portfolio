@@ -25,19 +25,14 @@ export class AppComponent implements OnInit {
   layout!: Layout;
   layoutType!: LayoutType;
 
-  constructor(
-    private layoutService: LayoutService,
-  ) {}
+  constructor(private layoutService: LayoutService) {}
 
   ngOnInit(): void {
     this.layoutService.getLayout().subscribe((layout: Layout) => {
       this.layout = layout;
       this.layoutType = this.layoutService.getLayoutType(layout);
-      console.log(this.layoutType)
+      console.log(this.layoutType); // TODO: remove
     });
   }
 }
 
-// TODO: handle device: check if mobile to use mobile bar
-// [ ]: mobile bar for landscape??? no
-// TODO: handle orientation: new side bar like stellaris vs. standard mobile on top

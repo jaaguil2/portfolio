@@ -15,14 +15,19 @@
     </a>
   </mat-nav-list>
 
-  <mat-nav-list *ngSwitchCase="'side'" >
+  <mat-nav-list *ngSwitchCase="'side'" class="side">
     <img
       class="image-side"
       src="./assets/images/profile-pic.png"
       alt="Profile picture"
     />
-    <a mat-list-item routerLink="{{ link.route }}" *ngFor="let link of links">
-        <mat-icon>{{ link.icon }}</mat-icon>
+    <a
+      routerLinkActive="active"
+      mat-list-item
+      routerLink="{{ link.route }}"
+      *ngFor="let link of links"
+    >
+      <mat-icon>{{ link.icon }}</mat-icon>
     </a>
   </mat-nav-list>
 
