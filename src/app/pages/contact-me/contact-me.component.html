@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"  [ngClass]="layout.orientation">
   <div class="list">
     <mat-list *ngFor="let contact of contacts">
       <h3 class="headers">{{ contact.name }}</h3>

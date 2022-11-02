@@ -6,13 +6,14 @@ export const PROJECTS: Project[] = [
     link: 'https://intense-meadow-15815.herokuapp.com/',
     githubLink: 'https://github.com/jaaguil2/DoggoDex',
     image: './assets/images/doggo-dex.png',
-    notes: 'A React app I made while still learning.',
+    notes:
+      'One of my first big projects I made with the React framework. Hosted on Heroku, so the server might need time to "wake up".',
   },
   {
     name: 'MyMind',
     link: 'https://mymind-fe.herokuapp.com/signin',
     githubLink: 'https://github.com/jaaguil2/MyMind',
     image: './assets/images/my-mind.png',
-    notes: 'An Angular app I made while still learning.',
+    notes: 'My first Angular project. Hosted on Heroku, so the server might need time to "wake up".',
   },
 ];

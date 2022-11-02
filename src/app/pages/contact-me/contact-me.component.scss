@@ -1,5 +1,5 @@
 .container {
-  margin: 1em;
+  padding: 1.5em;
 
   .list {
     .headers {
@@ -7,9 +7,19 @@
     }
 
     .actions {
-      background-color: red;
       display: flex;
       align-items: center;
     }
   }
+}
+
+.Portrait {
+  margin-top: 33%;
+}
+
+.Landscape {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
 }

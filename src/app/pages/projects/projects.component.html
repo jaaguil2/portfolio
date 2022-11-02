@@ -1,6 +1,7 @@
-<div class="container">
+<div class="card-container">
   <mat-card *ngFor="let project of projects" class="card">
     <mat-card-title class="title">{{ project.name }}</mat-card-title>
+    <img class="img" mat-card-image src="{{ project.image }}" alt="Project image" />
     <mat-card-content class="sub">
       <p>{{ project.notes }}</p>
     </mat-card-content>
@@ -8,11 +9,5 @@
       <a mat-button target="_blank" href="{{ project.githubLink }}">Github</a>
       <a mat-button target="_blank" href="{{ project.link }}">Project</a>
     </mat-card-actions>
-    <img
-      mat-card-image
-      class="img"
-      src="{{ project.image }}"
-      alt="Project image"
-    />
   </mat-card>
 </div>
