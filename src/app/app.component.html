@@ -1,15 +1,3 @@
-<!-- <mat-sidenav-container class="main-container">
-
-  <mat-sidenav-content class="main-content">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-
-  <mat-sidenav mode="side" opened class="nav-bar">
-    <app-nav></app-nav>
-  </mat-sidenav>
-  
-</mat-sidenav-container> -->
-
 <ng-container [ngSwitch]="layoutType">
   <div *ngSwitchCase="'bar'">
     <app-nav [navType]="layoutType"></app-nav>
