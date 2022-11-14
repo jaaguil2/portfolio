@@ -9,4 +9,4 @@
 ## Possible Features
  - on My image click, random quote from API
 
- wing 1
+ wing 2
