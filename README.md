@@ -8,4 +8,3 @@
 
 ## Possible Features
  - on My image click, random quote from API
- aaaaaa
